@@ -1,17 +1,27 @@
 package org.jiezhou.mybatis.binding;
 
+
 import cn.hutool.core.lang.ClassScanner;
+import org.jiezhou.mybatis.session.Configuration;
 import org.jiezhou.mybatis.session.SqlSession;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
 /**
- * 映射注册机
+ * @author 小傅哥，微信：fustack
+ * @description 映射器注册机
+ * @github https://github.com/fuzhengwei
+ * @copyright 公众号：bugstack虫洞栈 | 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
  */
 public class MapperRegistry {
+
+    private Configuration config;
+
+    public MapperRegistry(Configuration config) {
+        this.config = config;
+    }
 
     /**
      * 将已添加的映射器代理加入到 HashMap

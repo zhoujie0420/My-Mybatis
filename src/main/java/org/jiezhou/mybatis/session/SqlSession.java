@@ -10,6 +10,7 @@ public interface SqlSession {
      */
     <T> T selectOne(String statement);
 
+    Configuration getConfiguration();
     /**
      * 根据指定，只不过这个方法容许我们给sql传递一些参数
      * @param statement
